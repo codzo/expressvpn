@@ -5,6 +5,8 @@
     "keywords": ["expressvpn", "php"],
     "homepage": "https://github.com/codzo/expressvpn",
     "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "authors": [
         {
             "name": "Neil Fan",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9147aaf4236b5f526cae2ad78a8aa80f",
+    "content-hash": "e3f36c0a7c6fb7fbe6bfd238ac8e57b6",
     "packages": [
         {
             "name": "codzo/config",
@@ -55,11 +55,11 @@
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
         "codzo/config": 20
     },
-    "prefer-stable": false,
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
