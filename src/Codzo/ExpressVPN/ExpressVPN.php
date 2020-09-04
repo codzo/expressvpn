@@ -25,6 +25,7 @@ class ExpressVPN
     {
         $this->cli = $config->get('expressvpn.cli', 'expressvpn');
     }
+
     /**
      * Connect to a location
      * No action when connected to same location; will disconnect if connect to
@@ -118,12 +119,12 @@ class ExpressVPN
         if (!static::$locations_list) {
             $help_output = array();
             \exec(escapeshellcmd($this->cli) . ' list all', $help_output);
-            if(sizeof($help_output)>2) {
+            if (sizeof($help_output) > 2) {
                 // remove first two lines
                 $help_output = array_slice($help_output, 2);
-                foreach( $help_output as $l) {
+                foreach ($help_output as $l) {
                     list($alias,) = explode(' ', $l);
-                    if($alias) {
+                    if ($alias) {
                         static::$locations_list[] = $alias;
                     }
                 }
