@@ -1,0 +1,22 @@
+{
+    "name": "codzo/expressvpn",
+    "type": "library",
+    "description": "PHP library to manage Expressvpn",
+    "keywords": ["expressvpn", "php"],
+    "homepage": "https://github.com/codzo/expressvpn",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Neil Fan",
+            "email": "neil.fan@codzo.com"
+        }
+    ],
+    "require": {
+        "codzo/config": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Codzo\\ExpressVPN\\": "src/Codzo/ExpressVPN"
+        }
+    }
+}
