@@ -16,9 +16,21 @@
     "require": {
         "codzo/config": "dev-master"
     },
+    "require-dev": {
+        "codzo/phpcodesniffer-git-hook":"dev-master"
+    },
     "autoload": {
         "psr-4": {
             "Codzo\\ExpressVPN\\": "src/Codzo/ExpressVPN"
         }
+    },
+    "scripts": {
+        "apply-phpcs-hook": "Codzo\\PHPCodeSnifferGitHook\\Installer::applyPHPCSHook",
+        "post-install-cmd": [
+            "@apply-phpcs-hook"
+        ],
+        "post-update-cmd": [
+            "@apply-phpcs-hook"
+        ]
     }
 }
