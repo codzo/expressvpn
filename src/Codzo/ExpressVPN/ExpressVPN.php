@@ -17,13 +17,19 @@ class ExpressVPN
     protected $cli;
 
     /**
-     * @var array current status
+     * @var string log directory, default to "log"
+     */
+    protected $log_directory;
+
+    /**
+     * @var array output from last command line exec
      */
     protected $last_output = array();
 
     public function __construct(Config $config)
     {
         $this->cli = $config->get('expressvpn.cli', 'expressvpn');
+        $this->log_directory = $config->get('log.directory', 'log');
     }
 
     /**
@@ -101,7 +107,7 @@ class ExpressVPN
     protected function log($log)
     {
         file_put_contents(
-            'data/expressvpn.log',
+            $this->log_directory . '/expressvpn.log',
             date('c') . ' ' . $log . PHP_EOL,
             FILE_APPEND
         );
